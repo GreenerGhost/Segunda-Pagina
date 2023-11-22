@@ -1,0 +1,123 @@
+.headerPrincipal .container {
+    /*El diseño CSS Flexbox es un modulo que define un modelo de caja, optimizado para el diseño de interfaces de usuario, los nodos hijo se pueden distribuir en dirección vertical u horizontal, ademas se puede flexibilizar sus tamaños, ya sea rellenando el espacio disponible o encogiéndose para evitar salirse del contorno del nodo padre*/
+    display: flex;
+    align-items: center;                    /*controla la alineación de los elementos en el eje block dentro de su área*/
+    justify-content: space-between;         /*define como el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor*/
+}
+
+.headerPrincipal-nav {
+    display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;                 /*Especifica como colocar los objetos flexibles en el contenedor flexible, definiendo el eje principal y la dirección*/
+    height: 260px;
+    flex-wrap: wrap;                        /*Especifica si los elementos "hijos" son obligados a permanecer en una misma mínea o pueden fluir en varias líneas*/
+}
+
+.contenidoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenidoPrincipal-cursos-link {
+    display: flex;
+    width: 23%;
+}
+
+.videoSobre .container {
+    display: flex;
+}
+
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSobre-video {
+    flex-grow: 2;
+    flex-shrink: 2;
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 2;
+}
+
+/*Parte Responsiva de la página*/
+
+@media screen and (max-width:980px){
+    .headerPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .headerPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+        flex-wrap: nowrap;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+
+    .headerPrincipal-nav-link-app {
+        order: -1;                          /*Colocar el order -1 se indica que el elemento se colocará al inicio de los elementos al momento de visualizar*/
+    }
+
+    .videoSobre .container {
+        flex-direction: column;
+        
+    }
+
+}
+
